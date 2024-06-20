@@ -1,15 +1,17 @@
 import type { FoolModule } from '.';
 
 import { noop } from '../utils/noop';
+import { angular_core as version } from '@/version.json';
 
 const angular: FoolModule = () => {
   if (document.body.hasAttribute('ng-version')) {
     return noop;
   }
-  document.body.setAttribute('ng-version', '17.0.3');
+  document.body.setAttribute('ng-version', version);
   return () => {
     document.body.removeAttribute('ng-version');
   };
 };
+angular.npm = '@angular/core';
 
 export default angular;

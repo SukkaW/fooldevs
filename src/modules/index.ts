@@ -1,14 +1,21 @@
 import _4TellBoost from './4tellboost';
 import angular from './angular';
+import antd from './antd';
 import framer from './framer';
+import gsap from './gsap';
+import monaco from './manoco';
+import mobx from './mobx';
 import motion from './motion';
 import nextjs from './nextjs';
 import nuxt from './nuxt';
 import react from './react';
 import redux from './redux';
+import rive from './rive';
 import solid from './solid';
 import solidstart from './solidstart';
 import svelte from './svelte';
+import tailwind from './tailwind';
+import threejs from './threejs';
 import vite from './vite';
 import vitepress from './vitepress';
 import vue from './vue';
@@ -21,15 +28,22 @@ export interface FoolModule {
 export const modules = {
   _4TellBoost,
   angular,
+  antd,
   framer,
+  gsap,
+  mobx,
+  monaco,
   motion,
   nextjs,
   nuxt,
   react,
   redux,
+  rive,
   solid,
   solidstart,
   svelte,
+  tailwind,
+  threejs,
   vite,
   vitepress,
   vue

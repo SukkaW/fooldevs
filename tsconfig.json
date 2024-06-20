@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2018",
-    "lib": ["DOM", "ES2018"],
+    "lib": ["DOM", "ES2021"],
     "module": "Preserve",
     "paths": {
       "@/*": ["./src/*"]
