@@ -6,7 +6,8 @@ import { all } from '../src';
 const normalizeNpm = (name: string) => name
   .replaceAll('@', '')
   .replaceAll('/', '_')
-  .replaceAll('-', '_');
+  .replaceAll('-', '_')
+  .replaceAll('.', '_');
 
 (async () => {
   const ret: Record<string, string> = {};

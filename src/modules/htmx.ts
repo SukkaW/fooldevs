@@ -1,0 +1,13 @@
+import type { FoolModule } from '.';
+
+import { fakeWindowProperty } from '../utils/fake-window-property';
+
+import { htmx_org as version } from '@/version.json';
+
+const htmx: FoolModule = () => {
+  return fakeWindowProperty('html', { version });
+};
+
+htmx.npm = 'htmx.org';
+
+export default htmx;
