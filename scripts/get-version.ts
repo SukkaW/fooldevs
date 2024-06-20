@@ -18,8 +18,13 @@ const normalizeNpm = (name: string) => name
     }
   }));
 
+  const sortedRet = Object.keys(ret).sort().reduce<Record<string, string>>((acc, key) => {
+    acc[key] = ret[key];
+    return acc;
+  }, {});
+
   writeFileSync(
     join(__dirname, '../src/version.json'),
-    `${JSON.stringify(ret, null, 2) || '{}'}\n`
+    `${JSON.stringify(sortedRet, null, 2) || '{}'}\n`
   );
 })();
