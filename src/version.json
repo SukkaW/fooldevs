@@ -1,9 +1,12 @@
 {
+  "sentry": "0.1.2",
+  "codemirror": "6.0.1",
   "gsap": "3.12.5",
   "three": "0.165.0",
-  "svelte": "4.2.18",
+  "vuepress": "1.9.10",
   "angular_core": "18.0.3",
   "antd": "5.18.3",
   "framer_motion": "11.2.11",
-  "next": "14.2.4"
+  "next": "14.2.4",
+  "svelte": "4.2.18"
 }
