@@ -7,6 +7,8 @@ import { lit_element as version } from '@/version.json';
 const lit_element: FoolModule = () => {
   return fakeWindowProperty('litElementVersions', version);
 };
-lit_element.npm = 'lit-element';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  lit_element.npm = 'lit-element';
+}
 
 export default lit_element;

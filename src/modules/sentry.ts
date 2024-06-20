@@ -16,6 +16,8 @@ const sentry: FoolModule = () => {
     })
   ]);
 };
-sentry.npm = 'sentry';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  sentry.npm = 'sentry';
+}
 
 export default sentry;

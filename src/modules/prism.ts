@@ -14,6 +14,8 @@ const prism: FoolModule = () => {
   ]);
 };
 
-prism.npm = 'prismjs';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  prism.npm = 'prismjs';
+}
 
 export default prism;

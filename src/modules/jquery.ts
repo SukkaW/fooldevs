@@ -11,6 +11,8 @@ const jquery: FoolModule = () => {
     }
   });
 };
-jquery.npm = 'jquery';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  jquery.npm = 'jquery';
+}
 
 export default jquery;

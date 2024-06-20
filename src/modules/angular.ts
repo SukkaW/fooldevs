@@ -12,6 +12,9 @@ const angular: FoolModule = () => {
     document.body.removeAttribute('ng-version');
   };
 };
-angular.npm = '@angular/core';
+
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  angular.npm = '@angular/core';
+}
 
 export default angular;

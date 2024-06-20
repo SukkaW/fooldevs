@@ -3,6 +3,8 @@ import version from 'latest-version';
 import { join } from 'path';
 import { all } from '../src';
 
+process.env.LATEST_VERSION_SCRIPT = 'true';
+
 const normalizeNpm = (name: string) => name
   .replaceAll('@', '')
   .replaceAll('/', '_')

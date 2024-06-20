@@ -7,6 +7,8 @@ import { vuepress as version } from '@/version.json';
 const vuepress: FoolModule = () => {
   return fakeWindowProperty('__VUEPRESS__', { version });
 };
-vuepress.npm = 'vuepress';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  vuepress.npm = 'vuepress';
+}
 
 export default vuepress;

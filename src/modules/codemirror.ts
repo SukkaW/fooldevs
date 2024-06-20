@@ -6,6 +6,8 @@ import { codemirror as version } from '@/version.json';
 const codemirror: FoolModule = () => {
   return fakeWindowProperty('CodeMirror', { version });
 };
-codemirror.npm = 'codemirror';
 
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  codemirror.npm = 'codemirror';
+}
 export default codemirror;

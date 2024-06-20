@@ -6,6 +6,8 @@ import { next as version } from '@/version.json';
 const nextjs: FoolModule = () => {
   return fakeWindowProperty('next', { version });
 };
-nextjs.npm = 'next';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  nextjs.npm = 'next';
+}
 
 export default nextjs;

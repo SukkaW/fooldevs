@@ -9,6 +9,8 @@ const threejs: FoolModule = () => {
     REVISION: version
   });
 };
-threejs.npm = 'three';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  threejs.npm = 'three';
+}
 
 export default threejs;

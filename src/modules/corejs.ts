@@ -7,6 +7,9 @@ const corejs: FoolModule = () => {
   return fakeWindowProperty('__core-js_shared__', { versions: [{ version }]
   });
 };
-corejs.npm = 'core-js';
+
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  corejs.npm = 'core-js';
+}
 
 export default corejs;

@@ -8,6 +8,8 @@ const htmx: FoolModule = () => {
   return fakeWindowProperty('html', { version });
 };
 
-htmx.npm = 'htmx.org';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  htmx.npm = 'htmx.org';
+}
 
 export default htmx;

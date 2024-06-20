@@ -6,6 +6,8 @@ import { handlebars as version } from '@/version.json';
 const handlebars: FoolModule = () => fakeWindowProperty('Handlebars', {
   VERSION: version
 });
-handlebars.npm = 'handlebars';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  handlebars.npm = 'handlebars';
+}
 
 export default handlebars;

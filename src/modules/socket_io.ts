@@ -7,6 +7,8 @@ const socket_io: FoolModule = () => fakeWindowProperty('io', {
   Socket: {},
   version
 });
-socket_io.npm = 'socket.io';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  socket_io.npm = 'socket.io';
+}
 
 export default socket_io;

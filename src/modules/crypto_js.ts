@@ -7,6 +7,9 @@ const crypto_js: FoolModule = () => {
     Rabbit: ''
   });
 };
-crypto_js.npm = 'crypto-js';
+
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  crypto_js.npm = 'crypto-js';
+}
 
 export default crypto_js;

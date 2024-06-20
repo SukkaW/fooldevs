@@ -6,6 +6,9 @@ import { flowplayer as version } from '@/version.json';
 const flowplayer: FoolModule = () => {
   return fakeWindowProperty('flowplayer', { version });
 };
-flowplayer.npm = 'flowplayer';
+
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  flowplayer.npm = 'flowplayer';
+}
 
 export default flowplayer;

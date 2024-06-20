@@ -9,6 +9,8 @@ const svelte: FoolModule = () => {
     v: new Set([version])
   });
 };
-svelte.npm = 'svelte';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  svelte.npm = 'svelte';
+}
 
 export default svelte;

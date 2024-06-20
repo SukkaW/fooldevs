@@ -11,6 +11,8 @@ const typekit: FoolModule = () => {
     }
   });
 };
-typekit.npm = 'typekit';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  typekit.npm = 'typekit';
+}
 
 export default typekit;

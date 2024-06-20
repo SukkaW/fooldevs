@@ -7,6 +7,8 @@ import { gsap as version } from '@/version.json';
 const gsap: FoolModule = () => {
   return fakeWindowProperty('gsap', { version });
 };
-gsap.npm = 'gsap';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  gsap.npm = 'gsap';
+}
 
 export default gsap;

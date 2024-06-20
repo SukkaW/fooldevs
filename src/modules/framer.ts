@@ -14,6 +14,8 @@ const framer: FoolModule = () => {
   ]);
 };
 
-framer.npm = 'framer-motion';
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  framer.npm = 'framer-motion';
+}
 
 export default framer;

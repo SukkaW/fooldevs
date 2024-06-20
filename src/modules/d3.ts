@@ -6,6 +6,8 @@ import { d3 as version } from '@/version.json';
 const d3: FoolModule = () => {
   return fakeWindowProperty('d3', { version });
 };
-d3.npm = 'd3';
 
+if (process.env.LATEST_VERSION_SCRIPT === 'true') {
+  d3.npm = 'd3';
+}
 export default d3;
