@@ -6,7 +6,7 @@ import { three as version } from '@/version.json';
 
 const threejs: FoolModule = () => {
   return fakeWindowProperty('THREE', {
-    REVISION: version,
+    REVISION: version
   });
 };
 threejs.npm = 'three';
