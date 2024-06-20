@@ -34,7 +34,8 @@
   "scripts": {
     "lint": "eslint . --format=sukka",
     "build": "bunchee -m",
-    "version": "node -r @swc-node/register scripts/get-version.ts"
+    "version": "node -r @swc-node/register scripts/get-version.ts",
+    "release": "bumpp -r --all --commit \"release: %s\" --tag \"%s\""
   },
   "keywords": [
     "wappalyzer"
@@ -46,6 +47,7 @@
     "@swc-node/register": "^1.9.2",
     "@swc/core": "^1.6.3",
     "@types/node": "^20.14.6",
+    "bumpp": "^9.4.1",
     "bunchee": "^5.2.1",
     "eslint": "^9.5.0",
     "eslint-config-sukka": "6.0.0-beta.25",
