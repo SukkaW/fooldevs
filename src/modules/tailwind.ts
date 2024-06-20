@@ -1,9 +1,5 @@
-import type { FoolModule } from '.';
+import { withWindowProperty } from '../utils/common';
 
-import { fakeWindowProperty } from '../utils/fake-window-property';
-
-const tailwind: FoolModule = () => {
-  return fakeWindowProperty('tailwind');
-};
+const tailwind = withWindowProperty('tailwind');
 
 export default tailwind;

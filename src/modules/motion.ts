@@ -1,8 +1,5 @@
-import type { FoolModule } from '.';
-import { fakeWindowProperty } from '../utils/fake-window-property';
+import { withWindowProperty } from '../utils/common';
 
-const motion: FoolModule = () => {
-  return fakeWindowProperty('__MOTION_DEV_TOOLS__');
-};
+const motion = withWindowProperty('__MOTION_DEV_TOOLS__');
 
 export default motion;

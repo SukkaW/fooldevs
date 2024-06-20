@@ -1,8 +1,5 @@
-import type { FoolModule } from '.';
-import { fakeWindowProperty } from '../utils/fake-window-property';
+import { withWindowProperty } from '../utils/common';
 
-const react: FoolModule = () => {
-  return fakeWindowProperty('__REACT_DEVTOOLS_ATTACH__');
-};
+const react = withWindowProperty('__REACT_DEVTOOLS_ATTACH__');
 
 export default react;
