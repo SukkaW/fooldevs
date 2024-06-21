@@ -68,7 +68,7 @@ export interface FoolModule {
   npm?: string
 }
 
-export const modules = {
+export const modules: Record<string, FoolModule> = {
   _4TellBoost,
   angular,
   antd,
@@ -134,5 +134,3 @@ export const modules = {
   wordpress,
   xoops
 } as const;
-
-export const all = Object.values(modules);

@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs';
 import version from 'latest-version';
 import { join } from 'path';
-import { all } from '../src';
+import { allModules } from '../src';
 
 process.env.LATEST_VERSION_SCRIPT = 'true';
 
@@ -14,7 +14,7 @@ const normalizeNpm = (name: string) => name
 (async () => {
   const ret: Record<string, string> = {};
 
-  await Promise.all(all.map(async (mod) => {
+  await Promise.all(allModules.map(async (mod) => {
     if ('npm' in mod && mod.npm) {
       ret[normalizeNpm(mod.npm)] = await version(mod.npm);
     }
