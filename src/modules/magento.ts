@@ -1,10 +1,3 @@
-import type { FoolModule } from './_types';
-import { chain } from '../utils/chain';
-import { fakeWindowProperty } from '../utils/fake-window-property';
+import { withWindowProperty } from '../utils/common';
 
-const magento: FoolModule = () => chain([
-  fakeWindowProperty('Mage', ''),
-  fakeWindowProperty('VarienForm', '')
-]);
-
-export default magento;
+export default withWindowProperty('Mage', 'magento_server');

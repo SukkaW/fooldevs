@@ -1,10 +1,3 @@
-import type { FoolModule } from './_types';
-import { chain } from '../utils/chain';
-import { fakeWindowProperty } from '../utils/fake-window-property';
+import { withWindowProperty } from '../utils/common';
 
-const magisto: FoolModule = () => chain([
-  fakeWindowProperty('MagistoPlayerFrame', ''),
-  fakeWindowProperty('magisto_server', '')
-]);
-
-export default magisto;
+export default withWindowProperty('MagistoPlayerFrame', 'magisto_server');
