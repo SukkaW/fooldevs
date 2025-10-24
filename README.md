@@ -21,6 +21,8 @@ pnpm add fooldevs
 
 ## Usage
 
+**In your project**
+
 ```ts
 import { enable, allModules, enableAll } from 'fooldevs';
 
@@ -32,6 +34,26 @@ cleanup();
 
 // Enable all modules
 const cleanup = enableAll();
+```
+
+**Include w/ npm CDN**
+
+```html
+<!-- jsdelivr -->
+<script src="https://cdn.jsdelivr.net/npm/fooldevs@latest"></script>
+<!-- unpkg -->
+<!--<script src="https://unpkg.com/fooldevs@latest/dist/index.umd.min.js"></script>-->
+
+<script>
+  // Enable specific modules
+  const cleanup = fooldevs.enable(fooldevs.allModules.react);
+
+  // Cleanup all modifications
+  cleanup();
+
+  // Enable all modules
+  const cleanupAll = fooldevs.enableAll();
+</script>
 ```
 
 **Usage with React**
@@ -50,12 +72,14 @@ const Component = () => {
 
 ## Inspirations
 
-[`devfools`](https://github.com/thecuvii/devfools) made by @thecuvii.
+[`devfools`](https://github.com/thecuvii/devfools) made by [@thecuvii](https://github.com/thecuvii).
 
 **Differences**
 
 - `fooldevs` primarily focuses on tricking Wappalyzer with `window.[globalProperty]` and avoids DOM manipulation as much as possible. This enables maximum compatibility with various front-end frameworks and libraries.
 - `fooldevs` provides clean up functions to revert the modifications made.
+- `fooldevs` avoids breaking websites' functionality by only adding missing properties instead of overwriting existing ones, and still allows userland to set new values.
+  - when new value is set by userland, `fooldevs` will not clean up the property to avoid breaking websites.
 
 ## License
 
