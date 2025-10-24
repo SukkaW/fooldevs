@@ -4,9 +4,7 @@ import { fakeWindowProperty } from '../utils/fake-window-property';
 
 import { antd as version } from '@/version.json';
 
-const antd: FoolModule = () => {
-  return fakeWindowProperty('antd', { version });
-};
+const antd: FoolModule = () => fakeWindowProperty('antd', { version });
 
 if (process.env.LATEST_VERSION_SCRIPT === 'true') {
   antd.npm = 'antd';

@@ -5,4 +5,8 @@ module.exports = require('eslint-config-sukka').sukka({
     enable: true,
     files: ['eslint.config.js', 'scripts/**/*']
   }
+}, {
+  rules: {
+    'n/prefer-global/process': 'off'
+  }
 });

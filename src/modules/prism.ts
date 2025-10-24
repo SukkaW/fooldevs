@@ -5,14 +5,12 @@ import { fakeWindowProperty } from '../utils/fake-window-property';
 
 import { prismjs as version } from '@/version.json';
 
-const prism: FoolModule = () => {
-  return chain([
-    fakeWindowProperty('Prism'),
-    fakeWindowProperty('apex', {
-      libVersions: { prismJs: { version } }
-    })
-  ]);
-};
+const prism: FoolModule = () => chain([
+  fakeWindowProperty('Prism'),
+  fakeWindowProperty('apex', {
+    libVersions: { prismJs: { version } }
+  })
+]);
 
 if (process.env.LATEST_VERSION_SCRIPT === 'true') {
   prism.npm = 'prismjs';

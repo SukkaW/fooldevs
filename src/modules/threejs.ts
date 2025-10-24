@@ -4,11 +4,9 @@ import { fakeWindowProperty } from '../utils/fake-window-property';
 
 import { three as version } from '@/version.json';
 
-const threejs: FoolModule = () => {
-  return fakeWindowProperty('THREE', {
-    REVISION: version
-  });
-};
+const threejs: FoolModule = () => fakeWindowProperty('THREE', {
+  REVISION: version
+});
 if (process.env.LATEST_VERSION_SCRIPT === 'true') {
   threejs.npm = 'three';
 }

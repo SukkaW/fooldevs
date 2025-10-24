@@ -34,7 +34,7 @@
   "scripts": {
     "lint": "eslint . --format=sukka",
     "build": "LATEST_VERSION_SCRIPT=false bunchee -m --env=LATEST_VERSION_SCRIPT --format umd",
-    "version": "node -r @swc-node/register scripts/get-version.ts",
+    "version": "SWC_NODE_IGNORE_DYNAMIC=true node -r @swc-node/register scripts/get-version.ts",
     "release": "bumpp -r --all --commit \"release: %s\" --tag \"%s\""
   },
   "keywords": [
@@ -42,6 +42,9 @@
   ],
   "author": "Sukka <https://skk.moe>",
   "license": "MIT",
+  "dependencies": {
+    "foxts": "^5.0.0"
+  },
   "devDependencies": {
     "@eslint-sukka/node": "^8.0.1",
     "@swc-node/register": "^1.11.1",

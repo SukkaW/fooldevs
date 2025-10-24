@@ -1,6 +1,6 @@
 import type { FoolModule } from '.';
 
-import { noop } from '../utils/noop';
+import { noop } from 'foxts/noop';
 import { angular_core as version } from '@/version.json';
 
 const angular: FoolModule = () => {

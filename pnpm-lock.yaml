@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      foxts:
+        specifier: ^5.0.0
+        version: 5.0.0
     devDependencies:
       '@eslint-sukka/node':
         specifier: ^8.0.1

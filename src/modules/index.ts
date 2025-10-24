@@ -133,4 +133,4 @@ export const modules: Record<string, FoolModule> = {
   webpack,
   wordpress,
   xoops
-} as const;
+};

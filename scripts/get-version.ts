@@ -1,15 +1,17 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync } from 'node:fs';
 import version from 'latest-version';
-import { join } from 'path';
-import { allModules } from '../src';
+import { join } from 'node:path';
+import { allModules } from '@/index';
 
 process.env.LATEST_VERSION_SCRIPT = 'true';
 
-const normalizeNpm = (name: string) => name
-  .replaceAll('@', '')
-  .replaceAll('/', '_')
-  .replaceAll('-', '_')
-  .replaceAll('.', '_');
+function normalizeNpm(name: string) {
+  return name
+    .replaceAll('@', '')
+    .replaceAll('/', '_')
+    .replaceAll('-', '_')
+    .replaceAll('.', '_');
+}
 
 (async () => {
   const ret: Record<string, string> = {};

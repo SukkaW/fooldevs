@@ -1,7 +1,11 @@
-import { noobj, noop } from './noop';
+import { noop } from 'foxts/noop';
+import { noobj } from './noop';
 
-export const fakeWindowProperty = (name: string, value: unknown = noobj) => {
-  if (name in window) return noop;
+export function fakeWindowProperty(name: string, value: unknown = noobj) {
+  if (name in window) {
+    return noop
+  }
+
   Object.defineProperty(window, name, {
     enumerable: false,
     configurable: true,
@@ -12,4 +16,4 @@ export const fakeWindowProperty = (name: string, value: unknown = noobj) => {
   return () => {
     delete window[name as any];
   };
-};
+}
