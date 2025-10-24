@@ -4,18 +4,30 @@ import type { FoolModule } from './_types';
 
 export type { FoolModule };
 
+import addthis from './addthis';
+import alpinejs from './alpinejs';
 import angular from './angular';
 import antd from './antd';
+import astro from './astro';
 import babel from './babel';
+import backbone from './backbone';
 import bitbucket from './bitbucket';
+import catberry from './catberry';
 import codemirror from './codemirror';
 import corejs from './corejs';
 import crypto_js from './crypto_js';
 import d3 from './d3';
+import discourse from './discourse';
 import django from './django';
+import ember from './ember';
+import extjs from './extjs';
+import facebook from './facebook';
 import flowplayer from './flowplayer';
+import flutter from './flutter';
 import framer from './framer';
 import googleAnalytics from './googleAnalytics';
+import google_ad from './google_ad';
+import govuk from './govuk';
 import gsap from './gsap';
 import hammer_js from './hammer_js';
 import handlebars from './handlebars';
@@ -24,21 +36,29 @@ import htmx from './htmx';
 import hubspot from './hubspot';
 import hyperscript from './hyperscript';
 import ionic from './ionic';
+import ipb from './ipb';
 import jira from './jira';
 import jquery from './jquery';
+import knockout from './knockout';
 import lit_element from './lit_element';
 import lit_html from './lit_html';
 import lodash from './lodash';
 import magento from './magento';
 import magisto from './magisto';
 import manoco from './manoco';
+import microsoft_ad from './microsoft_ad';
 import mobx from './mobx';
 import motion from './motion';
+import mustache from './mustache';
 import nextjs from './nextjs';
+import nextra from './nextra';
 import ngmaterial from './ngmaterial';
 import nuxt from './nuxt';
+import okta from './okta';
 import pdfjs from './pdfjs';
+import prebid from './prebid';
 import prism from './prism';
+import prototype from './prototype';
 import q4 from './q4';
 import qstomizer from './qstomizer';
 import quanta from './quanta';
@@ -47,13 +67,17 @@ import qubit from './qubit';
 import react from './react';
 import redux from './redux';
 import remix from './remix';
+import requirejs from './requirejs';
 import rive from './rive';
+import rxjs from './rxjs';
 import sentry from './sentry';
 import shopify from './shopify';
 import socket_io from './socket_io';
 import solid from './solid';
 import solidstart from './solidstart';
+import squarespace from './squarespace';
 import stripe from './stripe';
+import styled from './styled';
 import svelte from './svelte';
 import swagger_ui from './swagger_ui';
 import swagify from './swagify';
@@ -62,33 +86,49 @@ import threejs from './threejs';
 import typekit from './typekit';
 import umami from './umami';
 import umijs from './umijs';
+import unifi from './unifi';
 import uswds from './uswds';
 import vite from './vite';
 import vitepress from './vitepress';
 import vue from './vue';
 import vuepress from './vuepress';
+import webflow from './webflow';
 import webpack from './webpack';
 import webvitals from './webvitals';
 import webxpay from './webxpay';
 import whmcs from './whmcs';
+import wix from './wix';
 import wordpress from './wordpress';
 import xoops from './xoops';
 import yandex from './yandex';
+import zendesk from './zendesk';
 import zone_js from './zone_js';
 
 export const modules: Record<string, FoolModule> = {
+  addthis,
+  alpinejs,
   angular,
   antd,
+  astro,
   babel,
+  backbone,
   bitbucket,
+  catberry,
   codemirror,
   corejs,
   crypto_js,
   d3,
+  discourse,
   django,
+  ember,
+  extjs,
+  facebook,
   flowplayer,
+  flutter,
   framer,
   googleAnalytics,
+  google_ad,
+  govuk,
   gsap,
   hammer_js,
   handlebars,
@@ -97,21 +137,29 @@ export const modules: Record<string, FoolModule> = {
   hubspot,
   hyperscript,
   ionic,
+  ipb,
   jira,
   jquery,
+  knockout,
   lit_element,
   lit_html,
   lodash,
   magento,
   magisto,
   manoco,
+  microsoft_ad,
   mobx,
   motion,
+  mustache,
   nextjs,
+  nextra,
   ngmaterial,
   nuxt,
+  okta,
   pdfjs,
+  prebid,
   prism,
+  prototype,
   q4,
   qstomizer,
   quanta,
@@ -120,13 +168,17 @@ export const modules: Record<string, FoolModule> = {
   react,
   redux,
   remix,
+  requirejs,
   rive,
+  rxjs,
   sentry,
   shopify,
   socket_io,
   solid,
   solidstart,
+  squarespace,
   stripe,
+  styled,
   svelte,
   swagger_ui,
   swagify,
@@ -135,17 +187,21 @@ export const modules: Record<string, FoolModule> = {
   typekit,
   umami,
   umijs,
+  unifi,
   uswds,
   vite,
   vitepress,
   vue,
   vuepress,
+  webflow,
   webpack,
   webvitals,
   webxpay,
   whmcs,
+  wix,
   wordpress,
   xoops,
   yandex,
+  zendesk,
   zone_js,
 };

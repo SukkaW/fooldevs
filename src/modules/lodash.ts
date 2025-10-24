@@ -3,7 +3,17 @@ import { fakeWindowProperty } from '../utils/fake-window-property';
 
 import { lodash as version } from './_version.json';
 
-const lodash: FoolModule = () => fakeWindowProperty('_', { version });
+const lodash: FoolModule = () => fakeWindowProperty('_', {
+  VERSION: version,
+  differenceBy: 0,
+  templateSettings: {
+    imports: {
+      _: {
+        VERSION: version
+      }
+    }
+  }
+});
 if (process.env.LATEST_VERSION_SCRIPT === 'true') {
   lodash.npm = 'lodash';
 }

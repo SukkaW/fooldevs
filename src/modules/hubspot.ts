@@ -1,7 +1,3 @@
-import type { FoolModule } from './_types';
+import { withWindowProperty } from '../utils/common';
 
-import { fakeWindowProperty } from '../utils/fake-window-property';
-
-const hubspot: FoolModule = () => fakeWindowProperty('hubspot');
-
-export default hubspot;
+export default withWindowProperty('hubspot', '_hsq', 'HubSpotConversations');

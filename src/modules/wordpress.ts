@@ -10,5 +10,10 @@ export default withWindowProperty(
   'RocketPreloadLinksConfig', 'RocketLazyLoadScripts', 'rocket_lazy',
   'WP_Statistics_http', 'wps_statistics_object',
   'wpforms', 'wpforms_settings',
-  'wpspagevisit'
+  'wpspagevisit',
+  'Waveform',
+  'weaverxBottomFooter',
+  'weaverxMonitorContent',
+  'weaverxOnResize',
+  'flyingPages'
 );

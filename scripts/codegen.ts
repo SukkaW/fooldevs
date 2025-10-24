@@ -19,8 +19,6 @@ function normalizeNpm(name: string) {
 }
 
 (async () => {
-  const ret: Record<string, string> = {};
-
   const bar = new SingleBar({}, Presets.legacy);
 
   const allModuleFiles = readdirSync(path.resolve(__dirname, '../src/modules'))
@@ -51,6 +49,9 @@ function normalizeNpm(name: string) {
   );
 
   const allModules: FoolModule[] = Object.values(require('../src/modules/_.ts').modules);
+  const ret: Record<string, string> = {
+    ciallo: 'Ciallo～(∠・ω< )⌒☆'
+  };
 
   bar.start(allModules.length, 0);
 
