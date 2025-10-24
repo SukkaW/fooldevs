@@ -73,6 +73,40 @@ export default defineConfig(() => {
       external
     }),
     defineConfig({
+      input: 'src/index.ts',
+      output: [
+        { dir: 'dist', entryFileNames: '[name].umd.min.js', format: 'umd', name: 'fooldevs', sourcemap: false, compact: true }
+      ],
+      plugins: [
+        oxcResolve(),
+        json({
+          compact: true,
+          preferConst: true
+        }),
+        replace({
+          preventAssignment: true,
+          'process.env.NODE_ENV': JSON.stringify('production'),
+          'process.env.LATEST_VERSION_SCRIPT': JSON.stringify('false')
+        }),
+        swc({
+          minify: true,
+          jsc: {
+            target: 'es2015',
+            minify: {
+              compress: {
+                passes: 3,
+                const_to_let: false
+              },
+              mangle: {},
+              module: false,
+              keep_fnames: false
+            }
+          }
+        })
+      ],
+      external
+    }),
+    defineConfig({
       input: {
         index: 'src/index.ts',
         react: 'src/react.ts'
