@@ -4,7 +4,8 @@ import { fakeWindowProperty } from '../utils/fake-window-property';
 
 const solid: FoolModule = () => chain([
   fakeWindowProperty('__SOLID_DEVTOOLS__', true),
-  fakeWindowProperty('Solid$$', true)
+  fakeWindowProperty('Solid$$', true),
+  fakeWindowProperty('_$HY')
 ]);
 
 export default solid;

@@ -70,6 +70,7 @@ import vuepress from './vuepress';
 import webpack from './webpack';
 import wordpress from './wordpress';
 import xoops from './xoops';
+import yandex from './yandex';
 import zone_js from './zone_js';
 
 export const modules: Record<string, FoolModule> = {
@@ -139,5 +140,6 @@ export const modules: Record<string, FoolModule> = {
   webpack,
   wordpress,
   xoops,
+  yandex,
   zone_js,
 };
