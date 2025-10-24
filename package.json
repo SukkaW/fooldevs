@@ -11,7 +11,6 @@
   "files": [
     "dist"
   ],
-
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -45,9 +44,11 @@
     "@rollup/plugin-replace": "^6.0.2",
     "@swc-node/register": "^1.11.1",
     "@swc/core": "^1.13.5",
+    "@types/cli-progress": "^3.11.6",
     "@types/node": "^24.9.1",
     "@types/react": "^19.2.2",
     "bumpp": "^10.3.1",
+    "cli-progress": "^3.12.0",
     "eslint": "^9.38.0",
     "eslint-config-sukka": "^8.0.1",
     "eslint-formatter-sukka": "^8.0.1",
