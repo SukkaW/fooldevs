@@ -1,11 +1,9 @@
 import { withWindowProperty } from '../utils/common';
 
-const shopify = withWindowProperty(
+export default withWindowProperty(
   'SHOPIFY_API_BASE_URL',
   'ShopifyAPI',
   'Shopify',
   'ShopifyCustomer',
   'shopifyAccessUrl'
 );
-
-export default shopify;
