@@ -27,6 +27,7 @@
     "lint": "eslint . --format=sukka",
     "build": "rollup -c rollup.config.ts --bundleConfigAsCjs --configPlugin swc3",
     "version": "SWC_NODE_IGNORE_DYNAMIC=true LATEST_VERSION_SCRIPT=true node -r @swc-node/register scripts/get-version.ts",
+    "prerelease": "pnpm run lint && pnpm run build",
     "release": "bumpp -r --all --commit \"release: %s\" --tag \"%s\""
   },
   "keywords": [
