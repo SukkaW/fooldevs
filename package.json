@@ -2,38 +2,30 @@
   "name": "fooldevs",
   "version": "0.0.1-beta.4",
   "description": "A tool that fools all kinds of devtools detection.",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/es/index.mjs",
-  "types": "./dist/cjs/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/es/index.d.mts",
-        "default": "./dist/es/index.mjs"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.ts",
-        "default": "./dist/cjs/index.js"
-      }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.cjs"
     },
     "./react": {
-      "import": {
-        "types": "./dist/es/react.d.mts",
-        "default": "./dist/es/react.mjs"
-      },
-      "require": {
-        "types": "./dist/cjs/react.d.ts",
-        "default": "./dist/cjs/react.js"
-      }
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.mjs",
+      "require": "./dist/react.cjs",
+      "default": "./dist/react.cjs"
     },
     "./package.json": "./package.json"
   },
   "scripts": {
     "lint": "eslint . --format=sukka",
-    "build": "LATEST_VERSION_SCRIPT=false bunchee -m --env=LATEST_VERSION_SCRIPT --format umd",
+    "build": "LATEST_VERSION_SCRIPT=false bunchee -m --env=LATEST_VERSION_SCRIPT --format umd --no-sourcemap",
     "version": "SWC_NODE_IGNORE_DYNAMIC=true LATEST_VERSION_SCRIPT=true node -r @swc-node/register scripts/get-version.ts",
     "release": "bumpp -r --all --commit \"release: %s\" --tag \"%s\""
   },
@@ -50,6 +42,7 @@
     "@swc-node/register": "^1.11.1",
     "@swc/core": "^1.13.5",
     "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
     "bumpp": "^10.3.1",
     "bunchee": "^6.6.2",
     "eslint": "^9.38.0",
