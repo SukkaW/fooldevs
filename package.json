@@ -1,6 +1,6 @@
 {
   "name": "fooldevs",
-  "version": "0.0.1-beta.6",
+  "version": "0.0.1-beta.7",
   "description": "A tool that fools all kinds of devtools detection.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
