@@ -1,5 +1,4 @@
 import { writeFileSync } from 'node:fs';
-import version from 'latest-version';
 import { join } from 'node:path';
 import { allModules } from '@/index';
 
@@ -18,7 +17,7 @@ function normalizeNpm(name: string) {
 
   await Promise.all(allModules.map(async (mod) => {
     if ('npm' in mod && mod.npm) {
-      ret[normalizeNpm(mod.npm)] = await version(mod.npm);
+      ret[normalizeNpm(mod.npm)] = await fetch(`https://cdn.jsdelivr.net/npm/${mod.npm}/package.json`).then(res => res.json()).then(data => data.version);
     }
   }));
 

@@ -50,7 +50,6 @@
     "eslint-config-sukka": "^8.0.1",
     "eslint-formatter-sukka": "^8.0.1",
     "is-ci": "^4.1.0",
-    "latest-version": "5.1.0",
     "rollup": "^4.52.5",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-oxc-resolve": "^0.0.5",
