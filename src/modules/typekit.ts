@@ -1,8 +1,8 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-import { typekit as version } from '@/version.json';
+import { typekit as version } from './_version.json';
 
 const typekit: FoolModule = () => fakeWindowProperty('Typekit', {
   config: {

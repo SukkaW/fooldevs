@@ -1,8 +1,8 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-import { vuepress as version } from '@/version.json';
+import { vuepress as version } from './_version.json';
 
 const vuepress: FoolModule = () => fakeWindowProperty('__VUEPRESS__', { version });
 if (process.env.LATEST_VERSION_SCRIPT === 'true') {

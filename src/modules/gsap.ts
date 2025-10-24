@@ -1,8 +1,8 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-import { gsap as version } from '@/version.json';
+import { gsap as version } from './_version.json';
 
 const gsap: FoolModule = () => fakeWindowProperty('gsap', { version });
 if (process.env.LATEST_VERSION_SCRIPT === 'true') {

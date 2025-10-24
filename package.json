@@ -30,7 +30,7 @@
   "scripts": {
     "lint": "eslint . --format=sukka",
     "build": "rollup -c rollup.config.ts --bundleConfigAsCjs --configPlugin swc3",
-    "version": "SWC_NODE_IGNORE_DYNAMIC=true LATEST_VERSION_SCRIPT=true node -r @swc-node/register scripts/get-version.ts",
+    "codegen": "SWC_NODE_IGNORE_DYNAMIC=true LATEST_VERSION_SCRIPT=true node -r @swc-node/register scripts/codegen.ts",
     "prerelease": "pnpm run lint && pnpm run build",
     "release": "bumpp -r --all --commit \"release: %s\" --tag \"%s\""
   },
@@ -60,6 +60,7 @@
     "rollup-plugin-oxc-resolve": "^0.0.5",
     "rollup-plugin-swc3": "^0.12.1",
     "rollup-preserve-directives": "^1.1.3",
+    "ts-dedent": "^2.2.0",
     "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@10.19.0"

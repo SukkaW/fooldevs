@@ -1,7 +1,7 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
-import { flowplayer as version } from '@/version.json';
+import { flowplayer as version } from './_version.json';
 
 const flowplayer: FoolModule = () => fakeWindowProperty('flowplayer', { version });
 

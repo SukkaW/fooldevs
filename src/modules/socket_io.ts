@@ -1,7 +1,7 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-import { socket_io as version } from '@/version.json';
+import { socket_io as version } from './_version.json';
 
 const socket_io: FoolModule = () => fakeWindowProperty('io', {
   Socket: {},

@@ -1,9 +1,9 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 import { chain } from '../utils/chain';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-import { prismjs as version } from '@/version.json';
+import { prismjs as version } from './_version.json';
 
 const prism: FoolModule = () => chain([
   fakeWindowProperty('Prism'),

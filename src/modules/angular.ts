@@ -1,7 +1,7 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 
 import { noop } from 'foxts/noop';
-import { angular_core as version } from '@/version.json';
+import { angular_core as version } from './_version.json';
 
 const angular: FoolModule = () => {
   if (document.body.hasAttribute('ng-version')) {

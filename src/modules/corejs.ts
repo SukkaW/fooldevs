@@ -1,7 +1,7 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
-import { core_js as version } from '@/version.json';
+import { core_js as version } from './_version.json';
 
 const corejs: FoolModule = () => fakeWindowProperty('__core-js_shared__', { versions: [{ version }]
 });

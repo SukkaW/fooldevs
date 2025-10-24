@@ -1,8 +1,8 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-import { lit_element as version } from '@/version.json';
+import { lit_element as version } from './_version.json';
 
 const lit_element: FoolModule = () => fakeWindowProperty('litElementVersions', version);
 if (process.env.LATEST_VERSION_SCRIPT === 'true') {

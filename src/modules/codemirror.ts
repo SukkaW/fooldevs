@@ -1,7 +1,7 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
-import { codemirror as version } from '@/version.json';
+import { codemirror as version } from './_version.json';
 
 const codemirror: FoolModule = () => fakeWindowProperty('CodeMirror', { version });
 

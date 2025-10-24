@@ -2,6 +2,6 @@ import type { FoolModule } from './_types';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-const rive: FoolModule = () => fakeWindowProperty('rive', { Rive: '' });
+const hubspot: FoolModule = () => fakeWindowProperty('hubspot');
 
-export default rive;
+export default hubspot;

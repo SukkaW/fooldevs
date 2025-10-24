@@ -1,7 +1,7 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-import { hammerjs as version } from '@/version.json';
+import { hammerjs as version } from './_version.json';
 
 const hammer_js: FoolModule = () => fakeWindowProperty('Hammer', {
   VERSION: version

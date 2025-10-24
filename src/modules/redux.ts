@@ -1,4 +1,4 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 import { fakeWindowProperty } from '../utils/fake-window-property';
 import { noop } from 'foxts/noop';
 

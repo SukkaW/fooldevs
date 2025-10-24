@@ -3,6 +3,10 @@ import { noop } from 'foxts/noop';
 const noobj = {};
 
 export function fakeWindowProperty(name: string, value: unknown = noobj) {
+  if (typeof window === 'undefined') {
+    return noop;
+  }
+
   if (name in window) {
     return noop;
   }

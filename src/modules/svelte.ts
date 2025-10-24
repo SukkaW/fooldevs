@@ -1,8 +1,8 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-import { svelte as version } from '@/version.json';
+import { svelte as version } from './_version.json';
 
 const svelte: FoolModule = () => fakeWindowProperty('__svelte', {
   v: new Set([version])

@@ -1,7 +1,7 @@
-import type { FoolModule } from './_';
+import type { FoolModule } from './_types';
 import { fakeWindowProperty } from '../utils/fake-window-property';
 
-import { ionic as version } from '@/version.json';
+import { ionic as version } from './_version.json';
 
 const ionic: FoolModule = () => fakeWindowProperty('Ionic', { version });
 if (process.env.LATEST_VERSION_SCRIPT === 'true') {
