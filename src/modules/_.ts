@@ -68,6 +68,9 @@ import vitepress from './vitepress';
 import vue from './vue';
 import vuepress from './vuepress';
 import webpack from './webpack';
+import webvitals from './webvitals';
+import webxpay from './webxpay';
+import whmcs from './whmcs';
 import wordpress from './wordpress';
 import xoops from './xoops';
 import yandex from './yandex';
@@ -138,6 +141,9 @@ export const modules: Record<string, FoolModule> = {
   vue,
   vuepress,
   webpack,
+  webvitals,
+  webxpay,
+  whmcs,
   wordpress,
   xoops,
   yandex,

@@ -1,3 +1,3 @@
 import { withWindowProperty } from '../utils/common';
 
-export default withWindowProperty('_babelPolyfill');
+export default withWindowProperty('WHMCS');
