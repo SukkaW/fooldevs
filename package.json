@@ -29,6 +29,7 @@
   },
   "scripts": {
     "lint": "eslint . --format=sukka",
+    "example": "parcel ./example/index.html",
     "build": "rollup -c rollup.config.ts --bundleConfigAsCjs --configPlugin swc3",
     "codegen": "SWC_NODE_IGNORE_DYNAMIC=true LATEST_VERSION_SCRIPT=true node -r @swc-node/register scripts/codegen.ts",
     "prerelease": "pnpm run lint && pnpm run build",
@@ -55,6 +56,7 @@
     "eslint-formatter-sukka": "^8.0.1",
     "foxts": "^5.0.0",
     "is-ci": "^4.1.0",
+    "parcel": "^2.16.0",
     "rollup": "^4.52.5",
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-oxc-resolve": "^0.0.5",
@@ -62,6 +64,13 @@
     "rollup-preserve-directives": "^1.1.3",
     "ts-dedent": "^2.2.0",
     "typescript": "^5.9.3"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
+  },
+  "targets": {
+    "main": false,
+    "types": false
   },
   "packageManager": "pnpm@10.19.0"
 }
