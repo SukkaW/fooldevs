@@ -31,6 +31,7 @@ import motion from './motion';
 import nextjs from './nextjs';
 import ngmaterial from './ngmaterial';
 import nuxt from './nuxt';
+import pdfjs from './pdfjs';
 import prism from './prism';
 import q4 from './q4';
 import qstomizer from './qstomizer';
@@ -102,6 +103,7 @@ export const modules: Record<string, FoolModule> = {
   nextjs,
   ngmaterial,
   nuxt,
+  pdfjs,
   prism,
   q4,
   qstomizer,
