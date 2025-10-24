@@ -15,6 +15,7 @@ export function fakeWindowProperty(name: string, value: unknown = noobj) {
     }
   });
   return () => {
-    delete window[name as any];
+    // eslint-disable-next-line @typescript-eslint/no-dynamic-delete -- safe since we already know we set it
+    delete window[name as keyof Window];
   };
 }

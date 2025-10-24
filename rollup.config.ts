@@ -19,13 +19,13 @@ const externalModules = (('dependencies' in pkgJson && pkgJson.dependencies && t
   'react'
 ]);
 
-export default defineConfig(() => {
-  const external = (mod: string) => {
-    if (mod.startsWith('node:')) return true;
-    if (externalModules.includes(mod)) return true;
-    return externalModules.some((m) => mod.startsWith(`${m}/`));
-  };
+function external(mod: string) {
+  if (mod.startsWith('node:')) return true;
+  if (externalModules.includes(mod)) return true;
+  return externalModules.some((m) => mod.startsWith(`${m}/`));
+}
 
+export default defineConfig(() => {
   const distDir = path.resolve('./dist');
   if (isCI && fs.existsSync(distDir)) {
     fs.rmSync(distDir, { recursive: true, force: true });
