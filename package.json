@@ -2,12 +2,16 @@
   "name": "fooldevs",
   "version": "0.0.1-beta.7",
   "description": "A tool that fools all kinds of devtools detection.",
+  "repository": {
+    "url": "https://github.com/SukkaW/fooldevs"
+  },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
+
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
