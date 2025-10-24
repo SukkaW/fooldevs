@@ -6,6 +6,7 @@ import { dts } from 'rollup-plugin-dts';
 import { oxcResolve } from 'rollup-plugin-oxc-resolve';
 import json from '@rollup/plugin-json';
 import replace from '@rollup/plugin-replace';
+import { preserveDirective } from 'rollup-preserve-directives';
 
 import { defineConfig } from 'rollup';
 import isCI from 'is-ci';
@@ -66,7 +67,8 @@ export default defineConfig(() => {
               keep_fnames: false
             }
           }
-        })
+        }),
+        preserveDirective()
       ],
       external
     }),

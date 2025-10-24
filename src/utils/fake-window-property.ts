@@ -1,9 +1,10 @@
 import { noop } from 'foxts/noop';
-import { noobj } from './noop';
+
+const noobj = {};
 
 export function fakeWindowProperty(name: string, value: unknown = noobj) {
   if (name in window) {
-    return noop
+    return noop;
   }
 
   Object.defineProperty(window, name, {
