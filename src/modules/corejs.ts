@@ -1,4 +1,4 @@
-import type { FoolModule } from '.';
+import type { FoolModule } from './_';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
 import { core_js as version } from '@/version.json';

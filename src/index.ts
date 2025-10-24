@@ -1,6 +1,6 @@
-import type { FoolModule } from './modules';
+import type { FoolModule } from './modules/_';
 import { chain } from './utils/chain';
-import { modules } from './modules';
+import { modules } from './modules/_';
 
 export function enable(mods: FoolModule[]) {
   const cleanups = mods.reduce<VoidFunction[]>((acc, cur) => {
@@ -11,7 +11,7 @@ export function enable(mods: FoolModule[]) {
 }
 
 export const allModules = Object.values(modules);
-export const enableAll = () => enable(Object.values(allModules));
+export const enableAll = () => enable(allModules);
 
 export { modules };
 

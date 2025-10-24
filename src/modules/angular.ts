@@ -1,4 +1,4 @@
-import type { FoolModule } from '.';
+import type { FoolModule } from './_';
 
 import { noop } from 'foxts/noop';
 import { angular_core as version } from '@/version.json';

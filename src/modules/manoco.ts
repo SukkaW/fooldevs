@@ -1,4 +1,4 @@
-import type { FoolModule } from '.';
+import type { FoolModule } from './_';
 import { chain } from '../utils/chain';
 
 import { fakeWindowProperty } from '../utils/fake-window-property';
