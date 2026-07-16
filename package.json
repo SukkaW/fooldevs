@@ -1,6 +1,6 @@
 {
   "name": "fooldevs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tool that fools all kinds of devtools detection.",
   "repository": {
     "url": "https://github.com/SukkaW/fooldevs"
