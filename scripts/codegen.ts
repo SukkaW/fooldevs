@@ -1,9 +1,8 @@
 import { writeFileSync, readdirSync } from 'node:fs';
 import path, { extname, join } from 'node:path';
-import { asyncRetry } from 'foxts/async-retry';
 import { dedent } from 'ts-dedent';
 
-import { SingleBar, Presets } from 'cli-progress';
+import { getLatestVersionBatch } from 'fast-npm-meta';
 
 import { createRequire } from 'node:module';
 import type { FoolModule } from '../src';
@@ -13,16 +12,12 @@ const require = createRequire(import.meta.url);
 function normalizeNpm(name: string) {
   return name
     .replaceAll('@', '')
-    .replaceAll('/', '_')
-    .replaceAll('-', '_')
-    .replaceAll('.', '_');
+    .replaceAll(/[/\-.]/g, '_');
 }
 
 (async () => {
-  const bar = new SingleBar({}, Presets.legacy);
-
   const allModuleFiles = readdirSync(path.resolve(__dirname, '../src/modules'))
-    .filter(f => extname(f) === '.ts' && !f.startsWith('_'));
+    .filter(f => extname(f) === '.ts' && f[0] !== '_');
 
   writeFileSync(
     path.join(__dirname, '../src/modules/_.ts'),
@@ -53,16 +48,19 @@ function normalizeNpm(name: string) {
     ciallo: 'Ciallo～(∠・ω< )⌒☆'
   };
 
-  bar.start(allModules.length, 0);
-
-  await Promise.all(allModules.map(async (mod) => {
+  const npmPackages = allModules.reduce<string[]>((acc, mod) => {
     if ('npm' in mod && mod.npm) {
-      ret[normalizeNpm(mod.npm)] = await asyncRetry(() => fetch(`https://cdn.jsdelivr.net/npm/${mod.npm}/package.json`).then(res => res.json()).then(data => data.version));
+      acc.push(mod.npm);
     }
-    bar.increment();
-  }));
+    return acc;
+  }, []);
 
-  bar.stop();
+  const metadatas = await getLatestVersionBatch(npmPackages);
+  metadatas.forEach((metadata) => {
+    if (metadata.version) {
+      ret[normalizeNpm(metadata.name)] = metadata.version;
+    }
+  });
 
   const sortedRet = Object.keys(ret).sort().reduce<Record<string, string>>((acc, key) => {
     acc[key] = ret[key];
