@@ -33,7 +33,7 @@
     "build": "rollup -c rollup.config.ts --bundleConfigAsCjs --configPlugin swc3",
     "codegen": "SWC_NODE_IGNORE_DYNAMIC=true LATEST_VERSION_SCRIPT=true node -r @swc-node/register scripts/codegen.ts",
     "prerelease": "pnpm run lint && pnpm run build",
-    "release": "bumpp -r --all --commit \"release: %s\" --tag \"%s\""
+    "release": "bumpp --install -r --all --commit \"release: %s\" --tag \"%s\""
   },
   "keywords": [
     "wappalyzer"
