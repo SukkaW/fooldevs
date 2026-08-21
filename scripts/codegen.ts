@@ -9,10 +9,12 @@ import type { FoolModule } from '../src';
 
 const require = createRequire(import.meta.url);
 
+const rNormalizeNpmName = /[/\-.]/g;
+
 function normalizeNpm(name: string) {
   return name
     .replaceAll('@', '')
-    .replaceAll(/[/\-.]/g, '_');
+    .replaceAll(rNormalizeNpmName, '_');
 }
 
 (async () => {

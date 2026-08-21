@@ -1,7 +1,7 @@
 export function chain(fns: VoidFunction[]) {
   return () => {
     if (!Array.isArray(fns)) return;
-    for (let i = 0; i < fns.length; i++) {
+    for (let i = 0, len = fns.length; i < len; i++) {
       const fn = fns[i];
       if (typeof fn !== 'function') {
         if (process.env.NODE_ENV === 'development') {
